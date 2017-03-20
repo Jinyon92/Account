@@ -9,9 +9,17 @@ public class Account {
 			balance = firstbalance;
 		}
 	}
+	public void credit(double deposit){
+		balance = balance + deposit;
+	}
+	
 	public double getbalance(){
 		return balance;
 	}
+	protected void setbalance(double change){
+		balance = change;
+	}
+	
 	public void debit(double withdraw){
 		if(balance>=withdraw)
 		{
