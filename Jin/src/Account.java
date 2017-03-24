@@ -23,12 +23,12 @@ public class Account {
 	public void debit(double withdraw){
 		if(balance>=withdraw)
 		{
-			balance = balance-withdraw; 
+			balance = balance - withdraw;
 		}
-		else if(balance<withdraw)
+		else
 		{
-			System.out.print("Dedit amount exceeded account balance");
+			System.out.print("Debit amount exceeded account balance.\n");
 		}
+
 	}
-	
 }

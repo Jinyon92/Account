@@ -5,22 +5,22 @@ import java.util.Scanner;
 		
 			Scanner input=new Scanner(System.in);
 			
-			Account account1=new Account(50.00);
-			Account account2=new Account(0.00);
+			checkingAccount account1=new checkingAccount(100.00);
+			checkingAccount account2=new checkingAccount(100.00);
 			
 			System.out.printf("Account1 balance: %f\n",account1.getbalance());
 			System.out.printf("Account2 balance: %f\n",account2.getbalance());
 			
-			System.out.print("Enter withdrawal amount for account1:");
+			System.out.print("Enter deposit amount for account1:");
 			double a;
 			a=input.nextDouble();
 			
-			account1.debit(a);
-			
-			System.out.printf("substracting %f from account1 balance\n",a);
+			account1.credit(a);
 			
 			System.out.printf("Account1 balance: %f\n",account1.getbalance());
 			System.out.printf("Account2 balance: %f\n",account2.getbalance());
+			
+		
 			
 			System.out.print("Enter withdrawal amount for account2:");
 			double b;
@@ -28,12 +28,14 @@ import java.util.Scanner;
 			
 			account2.debit(b);
 			
+			System.out.printf("Account1 balance: %f\n",account1.getbalance());
+			System.out.printf("Account2 balance: %f\n",account2.getbalance());
+			System.out.print("next month!\n");
 			
-			System.out.printf("\n substracting %f from account2 balance\n",b);
+			account1.nextMonth();
+			account2.nextMonth();
 			
 			System.out.printf("Account1 balance: %f\n",account1.getbalance());
 			System.out.printf("Account2 balance: %f\n",account2.getbalance());
-			
-			
 	}
 }
