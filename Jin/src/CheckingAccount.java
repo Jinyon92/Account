@@ -36,7 +36,11 @@ public class CheckingAccount extends Account {
 	}
 	
 	public double getWithdrawableAccount(){
+		if(getbalance()-credit_limit>=0){
 		return (getbalance()-credit_limit);
+		}else{
+			return 0;
+		}
 	}
 	
 	public boolean isBankrupted(){

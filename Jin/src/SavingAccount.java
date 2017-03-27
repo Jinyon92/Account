@@ -30,7 +30,7 @@ public class SavingAccount extends Account {
 	public void passTime(int time){
 		this.time = this.time + time;
 		if(this.time==12)
-			setbalance(getbalance()*Math.pow(1+interest,12));
+			setbalance(getbalance()*Math.pow(1+interest,this.time));
 	}
 	
 }
